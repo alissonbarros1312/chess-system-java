@@ -1,5 +1,9 @@
 package boardgame;
 
+/*
+ * classe para representar a posicao de cada peça
+ */
+
 public class Position {
 	private Integer row;
 	private Integer column;

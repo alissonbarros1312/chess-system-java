@@ -1,5 +1,10 @@
 package boardgame;
 
+/*
+ * classe que representa o tabuleiro
+ * contendo as linhas e colunas, e as peças representadas pro uma matriz de Piece[][]
+ */
+
 public class Board {
 
 	private Integer rows;
@@ -34,5 +39,9 @@ public class Board {
 
 	public Piece piece(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
+	}
+	public void placePiece(Piece piece, Position position) { // metodo para colocar a peça na posicao
+		pieces[position.getRow()][position.getColumn()] = piece;
+		piece.position = position;
 	}
 }

@@ -4,7 +4,8 @@ import chess.ChessPiece;
 
 public class UI {
 	
-	public static void printBoard(ChessPiece[][] piece) {
+	public static void printBoard(ChessPiece[][] piece) { // metodo que ira pegar a matriz passada no parametro, 
+														  // e imprimir o tabuleiro com as peças
 		
 		for(int i = 0; i < piece.length; i++) {
 			System.out.print((8 - i) + " ");
@@ -16,7 +17,7 @@ public class UI {
 		System.out.println("  a b c d e f g h");
 	}
 	
-	private static void printPiece(ChessPiece piece) {
+	private static void printPiece(ChessPiece piece) { // metodo auxiliar para imprimir - ou a peça
 		if(piece == null) {
 			System.out.print("-");
 		} else {

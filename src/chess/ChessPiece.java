@@ -1,5 +1,10 @@
 package chess;
 
+/*
+ * classe para representar qual a peça do xadrez, e sua cor
+ * sendo herança da class Piece
+ */
+
 import boardgame.Board;
 import boardgame.Piece;
 
