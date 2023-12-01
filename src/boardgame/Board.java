@@ -52,16 +52,16 @@ public class Board {
 	}
 	
 	public Piece removePiece(Position position) {
-		if (!positionExists(position)) {
+		if (!positionExists(position)) { // lança execessao caso selecione uma posicao que nao exista
 			throw new BoardException("Position not on the board");
 		}
 		if(piece(position) == null) {
-			return null;
+			return null; // se nao houver pecas retorna null
 		}
 		
-		Piece aux = piece(position);
+		Piece aux = piece(position); // busca peça na matriz pieces, na posicao indicada no parametro
 		aux.position = null;
-		pieces[position.getRow()][position.getColumn()] = null;
+		pieces[position.getRow()][position.getColumn()] = null; // remove a peça na position
 		return aux;
 	}
 

@@ -32,18 +32,18 @@ public class ChessMatch {
 	}
 
 	public ChessPiece perfomChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
-		Position source = sourcePosition.toPosition();
+		Position source = sourcePosition.toPosition(); // variaveis auxiliares de posicao de origem e destino
 		Position target = targetPosition.toPosition();
 		
-		validateSourcePosition(source);
-		Piece capturedPiece = makeMove(source, target);
+		validateSourcePosition(source); // verifica se a posicao de origem realmente tem alguma peça
+		Piece capturedPiece = makeMove(source, target); // realiza o movimento de movimento da peça e retorna a peça
 		return (ChessPiece) capturedPiece;
 	}
 	
 	private Piece makeMove(Position source, Position target) {
-		Piece p = board.removePiece(source);
+		Piece p = board.removePiece(source); // remove a peça na posicao indicada
 		Piece capturedPiece = board.removePiece(source);
-		board.placePiece(p, target);
+		board.placePiece(p, target); // add peça na posicao target
 		
 		return capturedPiece;
 	}
