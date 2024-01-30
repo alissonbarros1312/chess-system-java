@@ -60,6 +60,10 @@ public class UI {
 		System.out.println();
 		System.out.println("Turn : " + chessMatch.getTurn());
 		System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+		
+		if(chessMatch.getCheck()) {
+			System.out.println(chessMatch.getCurrentPlayer() + " King in CHECK!!");
+		}
 	}
 
 	public static void printBoard(ChessPiece[][] piece) { // metodo que ira pegar a matriz passada no parametro,
